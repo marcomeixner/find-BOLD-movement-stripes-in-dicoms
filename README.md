@@ -9,8 +9,8 @@ This script identifies a movement artefact in BOLD images; a periodic stripe art
 - install python (see screenshot install_python_windows.png)
 - check Installation via the command line: python --Version
 - install necessary libraries via pip: pip install matplotlib pydicom scipy numpy argparse
-- download the code to a cerain folder
-- go to that Directory in the command line and type: python main_gui_FFT_dcm_image_analysis.py
+- download the code to a certain folder
+- go to that folder in the windwos command line and type: python main_gui_FFT_dcm_image_analysis.py
   -> the GUI starts (see screenshot GUI.png)
 
 
