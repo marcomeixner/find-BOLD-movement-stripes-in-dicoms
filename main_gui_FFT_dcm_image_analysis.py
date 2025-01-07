@@ -197,7 +197,7 @@ periodicity_entry.insert(0, last_inputs.get("periodicity", "1"))  # Default valu
 tk.Label(root, text="Std Factor:").grid(row=4, column=0, padx=10, pady=5, sticky="w")
 std_factor_entry = tk.Entry(root, width=10)
 std_factor_entry.grid(row=4, column=1, sticky="w", padx=10, pady=5)
-std_factor_entry.insert(0, last_inputs.get("std_factor", "1.0"))  # Default value
+std_factor_entry.insert(0, last_inputs.get("std_factor", "3.0"))  # Default value
 
 # Progress Bar
 tk.Label(root, text="Progress:").grid(row=5, column=0, padx=10, pady=5, sticky="w")
