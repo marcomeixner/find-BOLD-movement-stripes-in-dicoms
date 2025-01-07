@@ -32,16 +32,16 @@ input:
  - Output Folder: where the Outputs are saved
  - Sagittal Slice Index: try to Chose an index a Little off the Center
  - Periodicity: this is the periodicity of the slices, which can be obtained from the dcm2niix-slice-times; 
-   Here is an example Output of dcm2niix for the SliceTiming:
+   Here is an example Output of dcm2niix (https://github.com/rordenlab/dcm2niix) for the SliceTiming:
 	"SliceTiming": [
-	0	0,
-	1	0.177,
-	2	0.355,
-	3	0.533,
-	4	0.71,
-	5	0.06,
-	6	0.238,
-   The slice that is obtained second is the one in line 5 - therefore the periodicity is 5
+	0,
+	0.177,
+	0.355,
+	0.533,
+	0.71,
+	0.06,
+	0.238,
+   The slice that is obtained second (at 0.06 ms) is the one in line 5 - therefore the periodicity of the line artefact is 5
  - Std Factor: the number of std from the mean to identify outlier volumes with stripe pattern; this determines the threshold in the Output plut
 
 output: 
