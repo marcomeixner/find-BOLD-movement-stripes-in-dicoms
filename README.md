@@ -17,11 +17,11 @@ This script identifies a movement artefact in BOLD images; a periodic stripe art
 
 # python scripts used:
 
-- FFT_dcm_image_analysis.py
+- FFT_dcm_image_analysis.py: 
   runs the FFT Analysis of every dicom volume in the Input Folder to identifiy horizontal stripes for a certain 'Sagittal Slices Index' with a certain 'Periodicity';
   (python libraries required: numpy, pydicom, argparse, scipy.fftpack)
 
-- find_and_plot_outlier
+- find_and_plot_outlier.py:
   identify outlier volumes with Stripes and Show (and save) a plot
   (python libraries required: os, matplotlib, argparse, numpy)
 
@@ -31,6 +31,17 @@ input:
  - Input Folder: where the dicom volumes are
  - Output Folder: where the Outputs are saved
  - Sagittal Slice Index: try to Chose an index a Little off the Center
+ - Periodicity: this is the periodicity of the slices, which can be obtained from the dcm2niix-slice-times; 
+   Here is an example Output of dcm2niix for the SliceTiming:
+	"SliceTiming": [
+	0	0,
+	1	0.177,
+	2	0.355,
+	3	0.533,
+	4	0.71,
+	5	0.06,
+	6	0.238,
+   The slice that is obtained second is the one in line 5 - therefore the periodicity is 5
  - Std Factor: the number of std from the mean to identify outlier volumes with stripe pattern; this determines the threshold in the Output plut
 
 output: 
