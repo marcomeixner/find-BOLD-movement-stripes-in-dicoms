@@ -41,6 +41,7 @@ input:
 	0.71,
 	0.06,
 	0.238,
+	...
    The slice that is obtained second (at 0.06 ms) is the one in line 5 - therefore the periodicity of the line artefact is 5
  - Std Factor: the number of std from the mean to identify outlier volumes with stripe pattern; this determines the threshold in the Output plut
 
