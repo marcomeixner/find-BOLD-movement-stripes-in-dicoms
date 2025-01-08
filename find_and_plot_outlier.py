@@ -41,9 +41,8 @@ def plot_match_scores(input, output_path, std_factor, outlier_indices):
 
     
     #print(f"Mean of match scores: {mean_value}")
-
+    #print("input:", input)
     
-
     # Convert the list of string values to a list of floats
     scores = [float(score) for score in input]
     #print("scores_for_plot:", scores)
@@ -80,7 +79,7 @@ def plot_match_scores(input, output_path, std_factor, outlier_indices):
     
     # Title and labels
     # plt.title('Match Scores with Outliers')
-    outlier_indices_p1 = [i + 1 for i in outlier_indices]
+    outlier_indices_p1 = [i + 1 for i in outlier_indices] # make outlier index start at one (not zero)
     plt.title(f'Match Scores with Outliers: {outlier_indices_p1}')
     plt.xlabel('Index')
     plt.ylabel('Match Score')
@@ -107,7 +106,7 @@ if __name__ == "__main__":
 
     # printing
     print("input_folder:", input_folder)
-    print("filename_list:", filename_list)
+    #print("filename_list:", filename_list)
     accumulated_results = json.loads(accumulated_results_json)
     print("Received accumulated_results:", accumulated_results)    
     print("std_factor:", std_factor)

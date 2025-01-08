@@ -64,10 +64,10 @@ def run_analysis():
 
     # Sort the files in ascending order
     files.sort()
-
-    # optionally print the number of files and the sorted list of files
-    #print(f"Number of files to process: {len(files)}")
-    #print("Sorted files:", files)
+    
+    # make a shortened version to pass on via a jscon
+    files_num_short = [f"{i+1}_{files.split('.')[0]}" for i, files in enumerate(files)]
+    
 
     # Update progress bar
     progress_bar["maximum"] = len(files)
@@ -126,7 +126,7 @@ def run_analysis():
 
             # Convert accumulated_results and stdout_results to JSON strings
             accumulated_results_json = json.dumps(accumulated_results)
-            filename_list_json = json.dumps(filename_list)            
+            filename_list_json = json.dumps(files_num_short)         
             stdout_results_json = json.dumps(stdout_results)
 
             # Call the other script and pass stdout_results and std_factor as arguments
