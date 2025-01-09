@@ -10,7 +10,8 @@ This script identifies a movement artefact in BOLD images; a periodic stripe art
 - check Installation via the command line: python --Version
 - install necessary libraries via pip: pip install matplotlib pydicom scipy numpy argparse
 - download the code to a certain folder
-- go to that folder in the windwos command line and type: python main_gui_FFT_dcm_image_analysis.py
+- go to that folder in the windows command line: cd c:\path\to\that\folder
+- once you are there type: python main_gui_FFT_dcm_image_analysis.py
   -> the GUI starts (see screenshot GUI.png)
 
 
@@ -42,7 +43,7 @@ input:
 	0.06,
 	0.238,
 	...]
-   The slice that is obtained second (at 0.06 ms) is the one in line 5 - therefore the periodicity of the line artefact is 5
+   The slice that is obtained second (at 0.06 ms) is the one in line 6 - therefore the periodicity of the line artefact is 5 (counting from line one, which is obtained first)
  - Std Factor: the number of std from the mean to identify outlier volumes with stripe pattern; this determines the threshold in the Output plut
 
 output: 
